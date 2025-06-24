@@ -42,7 +42,7 @@ async function loadBugs() {
             ${bug.title}
             <span class="tooltip">${bug.description || 'No description'}</span>
           </td>
-          <td>${bug.priority}</td>
+          <td class="priority-${bug.priority.toLowerCase()}">${bug.priority}</td> <!-- Dynamic class -->
           <td>${bug.status}</td>
           <td class="actions">
             <a href="edit.html?id=${bug.id}">Edit</a>
